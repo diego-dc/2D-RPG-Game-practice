@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 5823045194469543573}
   - component: {fileID: 6426104600793994289}
   - component: {fileID: 93421725818341095}
-  - component: {fileID: 1978825423330910453}
   m_Layer: 8
   m_Name: HurtBox
   m_TagString: Enemy
@@ -78,7 +77,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029481888, y: 0.046517372}
+  m_Offset: {x: 0.033406258, y: 0.046517372}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -89,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.97086716, y: 0.46323586}
+  m_Size: {x: 1.0966434, y: 0.46323586}
   m_EdgeRadius: 0
 --- !u!114 &5823045194469543573
 MonoBehaviour:
@@ -139,32 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherTag: Player
   damageAmount: 2
---- !u!61 &1978825423330910453
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404064210529883917}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2203476730849138158
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +414,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15957737, y: 0.06287193}
+  m_Offset: {x: 0.07527542, y: 0.06287193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -452,7 +425,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9346638, y: 0.34708786}
+  m_Size: {x: 0.9074707, y: 0.34708786}
   m_EdgeRadius: 0
 --- !u!95 &7103230234917152333
 Animator:

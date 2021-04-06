@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : Movement
 {
 
+    [SerializeField] private Inventory playerInventory;
     [SerializeField] private AnimatorController anim;
     [SerializeField] private StateMachine myState;
     [SerializeField] private float WeaponAttackDuration;

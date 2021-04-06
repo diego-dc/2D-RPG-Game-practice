@@ -23,7 +23,7 @@ public class InventorySlot : MonoBehaviour
         // if the item is not null we want to give the sprite to the UI so it can be displayed
         if(thisItem)
         {
-            //itemImage.sprite = thisItem.itemImage;
+            itemImage.sprite = thisItem.itemSprite;
             itemNumberText.text = "" + thisItem.numberHeld;
         }
     }

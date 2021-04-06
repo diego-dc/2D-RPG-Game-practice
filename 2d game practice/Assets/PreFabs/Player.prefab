@@ -257,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   myRigidbody: {fileID: 2799741226340493723}
+  playerInventory: {fileID: 0}
   anim: {fileID: 791444974012003144}
   myState: {fileID: 1443022522927065671}
   WeaponAttackDuration: 0.1
@@ -1156,6 +1157,7 @@ GameObject:
   - component: {fileID: 9075387836817613447}
   - component: {fileID: 5706164763568725180}
   - component: {fileID: 2040582341}
+  - component: {fileID: 1683668150}
   m_Layer: 11
   m_Name: HurtBox
   m_TagString: Player
@@ -1218,7 +1220,8 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   modifyHealthSignal: {fileID: 11400000, guid: e0646e443327f1442972c277d4cd1fa9, type: 2}
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 4034361950023440449, guid: 155695580b5170d449e2a77d6f09a7b7,
+    type: 3}
   flash: {fileID: 5052446768403827715}
   playerHealth: {fileID: 11400000, guid: 18dd428fb1a6a554c919d24a40365f82, type: 2}
 --- !u!114 &2040582341
@@ -1239,6 +1242,33 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5706164763568725180}
         m_MethodName: AddMaxHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1683668150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968826008931428838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244db56a677c7044ab54cb303a92d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 9aaa75cbde9fe2442955fe54097304eb, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5706164763568725180}
+        m_MethodName: UseHealthPotion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

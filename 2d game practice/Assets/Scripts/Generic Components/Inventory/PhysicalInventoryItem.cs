@@ -22,14 +22,7 @@ public class PhysicalInventoryItem : MonoBehaviour
     {
         if(playerInventory && thisItem)
         {
-            if(playerInventory.myInventory.Contains(thisItem))
-            {
-                thisItem.numberHeld += 1;
-            }else
-            {
-                playerInventory.myInventory.Add(thisItem);
-                thisItem.numberHeld += 1;
-            }
+            playerInventory.AddItem(thisItem);
         }
     }
 }

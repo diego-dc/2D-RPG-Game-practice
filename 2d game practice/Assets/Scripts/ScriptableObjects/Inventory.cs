@@ -10,17 +10,20 @@ public class Inventory : ScriptableObject
     [Header("Items")]
     public List<InventoryItem> myInventory = new List<InventoryItem>();
 
-     public void AddItem(InventoryItem newItem)
+    public void AddItem(InventoryItem newItem)
     {
-        // if the item is not in the inventory we add it
-        if(!myInventory.Contains(newItem))
+        // if its already in the inventory we increase its number
+        if(isItemInInventory(newItem))
         {
-             myInventory.Add(newItem);
+            if(!newItem.isUnique)
+            {
+                newItem.numberHeld++;
+            }
         }
+        // if the item is not in the inventory we add it
         else
         {
-            // if its already in the inventory we increase its number
-            newItem.numberHeld++;
+            myInventory.Add(newItem);
         }
     }
 
@@ -59,6 +62,5 @@ public class Inventory : ScriptableObject
         // will tell use if there is the item your are trying to use or not
         return newItem.numberHeld > 0;
     }
-
-
+    
 }

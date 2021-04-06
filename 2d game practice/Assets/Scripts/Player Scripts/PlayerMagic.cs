@@ -38,4 +38,10 @@ public class PlayerMagic : FiniteAttribute
         UpdateMagic();
     }
 
+    public void UseMagicPotion()
+    {
+        this.Add(5);
+        UpdateMagic();
+    }
+
 }

@@ -65,5 +65,10 @@ public class PlayerHealth : Health
         }
     }
 
+    public void UseHealthPotion()
+    {
+        this.Heal(5);
+    }
+
 
 }

@@ -626,6 +626,7 @@ GameObject:
   - component: {fileID: 7682831652273424888}
   - component: {fileID: 7682831652273424889}
   - component: {fileID: 1468157407}
+  - component: {fileID: 1651663294}
   m_Layer: 5
   m_Name: MagicSlider
   m_TagString: Untagged
@@ -777,6 +778,33 @@ MonoBehaviour:
   currentValue: 0
   magicSlider: {fileID: 7682831652273424895}
   myMagic: {fileID: 11400000, guid: 2c879ffe4d47e9f4390060ba6af88c82, type: 2}
+--- !u!114 &1651663294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682831652273424892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244db56a677c7044ab54cb303a92d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 00749202a4853914d9967f8a6dbd7190, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1468157407}
+        m_MethodName: UseMagicPotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7682831652441640859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,15 +2998,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -320
       objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627417, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_HorizontalFit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Spacing.y
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
         type: 3}
       propertyPath: m_CellSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
         type: 3}
       propertyPath: m_CellSize.y
-      value: 100
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292954897415627418, guid: 8ea1c233fad109d4fb3cf14ff813e245,
+        type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8292954897415627419, guid: 8ea1c233fad109d4fb3cf14ff813e245,
         type: 3}
@@ -3700,12 +3763,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 046de1a614170fe4cb41f1d9028f3be9, type: 3}
---- !u!224 &7804560066443616873 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 582337509820114288, guid: 046de1a614170fe4cb41f1d9028f3be9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7231583524017702681}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7804560065756582115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 582337508864055290, guid: 046de1a614170fe4cb41f1d9028f3be9,
@@ -3721,6 +3778,12 @@ RectTransform:
 --- !u!1 &7804560067243793597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 582337510637001636, guid: 046de1a614170fe4cb41f1d9028f3be9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7231583524017702681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7804560066443616873 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 582337509820114288, guid: 046de1a614170fe4cb41f1d9028f3be9,
     type: 3}
   m_PrefabInstance: {fileID: 7231583524017702681}
   m_PrefabAsset: {fileID: 0}

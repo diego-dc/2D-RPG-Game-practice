@@ -86,8 +86,12 @@ public class InventoryManager : MonoBehaviour
     {
         if(currentItem)
         {
-            // we use the item
-            //currentItem.Use();
+            // we use the item sending their signal
+            if(currentItem.mySignal)
+            {
+                currentItem.mySignal.Raise();
+                currentItem.numberHeld--;
+            }
             // clear all of the inentory slots
             ClearInventorySlots();
             // refill all slots with new numbers

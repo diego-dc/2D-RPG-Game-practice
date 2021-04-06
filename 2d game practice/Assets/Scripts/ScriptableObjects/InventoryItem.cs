@@ -12,5 +12,6 @@ public class InventoryItem : ScriptableObject
     public int numberHeld;
     public bool isUsable;
     public bool isUnique;
+    public SignalSender mySignal;
 
 }
