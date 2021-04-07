@@ -5,7 +5,7 @@ using UnityEngine;
 public class ResetToPosition : MonoBehaviour
 {
 
-    [SerializeField] private Vector2 resetPosition;
+    [SerializeField] public Vector2 resetPosition;
 
     public void ResetPosition()
     {

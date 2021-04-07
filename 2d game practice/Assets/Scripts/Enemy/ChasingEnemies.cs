@@ -33,30 +33,34 @@ public class ChasingEnemies : Movement
 
     public virtual void CheckDistance()
     {   
-        // if the position of the enemy's target is within the chaseRadius
-        // the enemy will start moving towards the target's position
-        // We change the animation
-        // And the state of the enemy in case this one was sleeping or in another state
-        float targetDistance = Vector3.Distance(transform.position, target.position);
-        if(targetDistance <= chaseRadius && targetDistance > attackRadius)
+        if(target)
         {
-            if(myStateMachine.myState != GenericState.stun)
+            // if the position of the enemy's target is within the chaseRadius
+            // the enemy will start moving towards the target's position
+            // We change the animation
+            // And the state of the enemy in case this one was sleeping or in another state
+            float targetDistance = Vector3.Distance(transform.position, target.position);
+            if(targetDistance <= chaseRadius && targetDistance > attackRadius)
             {
-                Vector2 temporary = (Vector2)(target.position - transform.position);
-                Motion(temporary);
-                SetAnimation(temporary);
-                myStateMachine.ChangeState(GenericState.walk);
+                if(myStateMachine.myState != GenericState.stun)
+                {
+                    Vector2 temporary = (Vector2)(target.position - transform.position);
+                    Motion(temporary);
+                    SetAnimation(temporary);
+                    myStateMachine.ChangeState(GenericState.walk);
+                }
+            // if is not in the radius enemy can do another action.
+            }else if(targetDistance > chaseRadius){
+                // add which action should do while is not chasing the player
+                // ex: go back to sleeping.
+                Motion(Vector2.zero);
+            }else if(targetDistance < attackRadius)
+            {
+                Motion(Vector2.zero);
             }
-        // if is not in the radius enemy can do another action.
-        }else if(targetDistance > chaseRadius){
-            // add which action should do while is not chasing the player
-            // ex: go back to sleeping.
-            Motion(Vector2.zero);
-        }else if(targetDistance < attackRadius)
-        {
-            Motion(Vector2.zero);
         }
     }
+        
 
 
     //With this method we change the animation for each direction the enemy moves.

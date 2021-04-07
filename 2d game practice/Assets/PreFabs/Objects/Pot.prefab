@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisLoot: {fileID: 11400000, guid: 86374d6cb9b0a64408a7ba43ff3f27ed, type: 2}
+  myHealth: {fileID: 1989396316600523653}
 --- !u!1 &4293549091732862883
 GameObject:
   m_ObjectHideFlags: 0

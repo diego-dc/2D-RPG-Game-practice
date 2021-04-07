@@ -18,29 +18,33 @@ public class PatrolEnemyMovement : ChasingEnemies
 
     public override void CheckDistance() // Some details in ChasingEnemies.cs
     {
-        float targetDistance = Vector3.Distance(transform.position, target.position);
-        if(targetDistance <= chaseRadius && targetDistance > attackRadius)
+        if(target)
         {
-            if(myStateMachine.myState != GenericState.stun)
+            float targetDistance = Vector3.Distance(transform.position, target.position);
+            if(targetDistance <= chaseRadius && targetDistance > attackRadius)
             {
-                Vector2 temporary = (Vector2)(target.position - transform.position);
-                Motion(temporary);
-                SetAnimation(temporary);
+                if(myStateMachine.myState != GenericState.stun)
+                {
+                    Vector2 temporary = (Vector2)(target.position - transform.position);
+                    Motion(temporary);
+                    SetAnimation(temporary);
+                }
+            }else if(targetDistance > chaseRadius)
+            {    
+                if(Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance)
+                {
+                    Vector2 temporary = (Vector2)(path[currentPoint].position - transform.position);
+                    Motion(temporary);
+                    SetAnimation(temporary);
+                }else{
+                    ChangeGoal();
+                }
             }
-        }else if(targetDistance > chaseRadius)
-        {    
-            if(Vector3.Distance(transform.position, path[currentPoint].position) > roundingDistance)
+            else if(targetDistance < attackRadius)
             {
-                Vector2 temporary = (Vector2)(path[currentPoint].position - transform.position);
-                Motion(temporary);
-                SetAnimation(temporary);
-            }else{
-                ChangeGoal();
+                Motion(Vector2.zero);
             }
-        }
-        else if(targetDistance < attackRadius)
-        {
-            Motion(Vector2.zero);
+
         }
     }
 

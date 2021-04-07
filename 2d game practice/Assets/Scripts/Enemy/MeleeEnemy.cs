@@ -17,34 +17,38 @@ public class MeleeEnemy : ChasingEnemies
     }
 
     public override void CheckDistance()
-    {   
-        // if the position of the enemy's target is within the chaseRadius
-        // the enemy will start moving towards the target's position
-        // We change the animation
-        // And the state of the enemy in case this one was sleeping or in another state
-        float targetDistance = Vector3.Distance(transform.position, target.position);
-        if(targetDistance <= chaseRadius && targetDistance > attackRadius)
+    {  
+        if(target)
         {
-            if(myStateMachine.myState != GenericState.stun)
+            // if the position of the enemy's target is within the chaseRadius
+            // the enemy will start moving towards the target's position
+            // We change the animation
+            // And the state of the enemy in case this one was sleeping or in another state
+            float targetDistance = Vector3.Distance(transform.position, target.position);
+            if(targetDistance <= chaseRadius && targetDistance > attackRadius)
             {
-                Vector2 temporary = (Vector2)(target.position - transform.position);
-                this.SetAnimation(temporary);
-                this.Motion(temporary);
-                myStateMachine.ChangeState(GenericState.walk);
-                anim.SetAnimParameter("Walking", true);
-            }
-            // if is within the attackRadius the enemy will attack
-        }else if(targetDistance <= attackRadius)
-        {
-            if(myStateMachine.myState != GenericState.stun)
+                if(myStateMachine.myState != GenericState.stun)
                 {
-                    StartCoroutine(AttackCo());
+                    Vector2 temporary = (Vector2)(target.position - transform.position);
+                    this.SetAnimation(temporary);
+                    this.Motion(temporary);
+                    myStateMachine.ChangeState(GenericState.walk);
+                    anim.SetAnimParameter("Walking", true);
                 }
+                // if is within the attackRadius the enemy will attack
+            }else if(targetDistance <= attackRadius)
+            {
+                if(myStateMachine.myState != GenericState.stun)
+                    {
+                        StartCoroutine(AttackCo());
+                    }
+            }
+            //If is outside the chasing radius
+            else{
+                anim.SetAnimParameter("Walking", false);
+            }
         }
-        //If is outside the chasing radius
-        else{
-            anim.SetAnimParameter("Walking", false);
-        }
+        
     }
 
     public IEnumerator AttackCo()

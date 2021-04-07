@@ -799,7 +799,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028960764, y: -0.44906688}
+  m_Offset: {x: -0.028960764, y: -0.44290262}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -810,7 +810,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5030897, y: 0.24508977}
+  m_Size: {x: 0.5030897, y: 0.23276126}
   m_EdgeRadius: 0
 --- !u!95 &2799741226340493703
 Animator:
@@ -1192,7 +1192,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013089657, y: -0.22669196}
+  m_Offset: {x: -0.013089657, y: -0.24672604}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1203,7 +1203,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.58, y: 0.52043486}
+  m_Size: {x: 0.58, y: 0.560503}
   m_EdgeRadius: 0
 --- !u!114 &5706164763568725180
 MonoBehaviour:
@@ -1222,6 +1222,7 @@ MonoBehaviour:
   modifyHealthSignal: {fileID: 11400000, guid: e0646e443327f1442972c277d4cd1fa9, type: 2}
   deathEffect: {fileID: 4034361950023440449, guid: 155695580b5170d449e2a77d6f09a7b7,
     type: 3}
+  myDeadMenu: {fileID: 0}
   flash: {fileID: 5052446768403827715}
   playerHealth: {fileID: 11400000, guid: 18dd428fb1a6a554c919d24a40365f82, type: 2}
 --- !u!114 &2040582341

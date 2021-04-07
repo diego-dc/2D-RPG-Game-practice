@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 7103230234917152333}
   - component: {fileID: 7699461998684959804}
   - component: {fileID: 299393438233402433}
+  - component: {fileID: 2802012035627387814}
   m_Layer: 8
   m_Name: PatrolEnemy
   m_TagString: Enemy
@@ -474,6 +475,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetPosition: {x: 19, y: 10}
+--- !u!114 &2802012035627387814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103230234917152330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbdd153023614143bf1a7297a8e46f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisLoot: {fileID: 11400000, guid: 45e77b6427f4dcc4ab0cd0a24993112a, type: 2}
+  myHealth: {fileID: 5823045194469543573}
 --- !u!1 &7725324583005896183
 GameObject:
   m_ObjectHideFlags: 0

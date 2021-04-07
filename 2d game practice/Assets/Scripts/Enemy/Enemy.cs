@@ -11,8 +11,14 @@ public class Enemy : StateMachine
     [SerializeField] private ResetToPosition myInitialPosition;
  
 
+    void Start()
+    {
+        Vector2 temp = (Vector2)(this.transform.position);
+        myInitialPosition.resetPosition = temp;
+    }
     void OnEnable()
     {
+        
         myInitialPosition.ResetPosition();
     }
 

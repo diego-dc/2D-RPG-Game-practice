@@ -43,13 +43,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-
-    public void ResumeButton()
-    {
-        ChangePauseValue();
-    }
-
-    public void QuitButton()
+    public void MainMenuButton()
     {
         SceneManager.LoadScene(mainMenuSceneString);
     }

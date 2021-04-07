@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Dungeon.unity
     guid: 49184c5a0d3f3e04fac6e50c3da25c17
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 78721ae571d7a9c40bb6c9f3615e5e1b
   m_configObjects: {}

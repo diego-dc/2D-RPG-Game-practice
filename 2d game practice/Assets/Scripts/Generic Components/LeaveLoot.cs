@@ -7,22 +7,18 @@ public class LeaveLoot : MonoBehaviour
 
     [Header("Type of Loot")]
     public LootTable thisLoot;
-    private bool isApplicationQuitting = false;
-    // Start is called before the first frame update
+    [SerializeField] private Health myHealth;
+   
     void OnDisable()
     {
         // we have to check if is not getting disabled because of the application is quitting
         // in that case we cant leave loot or we will have an error, since the objects wont be destroyed
-        if(!isApplicationQuitting)
+        if(myHealth.currentHealth <= 0)
         {
             MakeLoot();
         }
     }
     
-    void OnApplicationQuit()
-    {
-        isApplicationQuitting = true;
-    }
 
     private void MakeLoot()
     {

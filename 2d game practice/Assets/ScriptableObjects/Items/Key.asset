@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: A key...
   itemSprite: {fileID: 4695374288273231278, guid: 6252d36910f28b44bb29458a7281f3b6,
     type: 3}
-  numberHeld: 0
+  numberHeld: 1
   isUsable: 0
   isUnique: 0
   mySignal: {fileID: 0}

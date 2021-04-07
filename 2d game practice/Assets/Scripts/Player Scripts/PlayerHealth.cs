@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
 
+    [SerializeField] private YouDiedMenu myDeadMenu;
     [SerializeField] private FlashColor flash;
     [SerializeField] private FloatValue playerHealth;
 
@@ -30,6 +31,10 @@ public class PlayerHealth : Health
             {
                 flash.StartFlash();
             }
+        }else
+        {
+            this.Die();
+            myDeadMenu.ChangeDeadMenuValue();
         }
         
     }
