@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a28124426dfe88449e571e2bec4490e, type: 3}
+  m_Name: Key
+  m_EditorClassIdentifier: 
+  itemName: Key
+  itemDescription: A key... i wonder where it comes from.
+  itemSprite: {fileID: 4695374288273231278, guid: 6252d36910f28b44bb29458a7281f3b6,
+    type: 3}
+  numberHeld: 0
+  isUsable: 0
+  isUnique: 0
+  mySignal: {fileID: 0}
